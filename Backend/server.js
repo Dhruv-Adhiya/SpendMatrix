@@ -1,5 +1,6 @@
 require('dotenv').config();
 const express = require("express");
+const cors = require('cors');
 const pool = require("./config/db");
 const authRoutes = require('./routes/authRoutes');
 const userRoutes = require('./routes/userRoutes');
@@ -19,9 +20,20 @@ const { globalLimiter, authLimiter, adminLimiter } = require('./middleware/rateL
 const { startRecurringJob } = require('./jobs/recurringJob');
 
 const app = express();
+
+// CORS — allow Vite dev server on port 3000 and 5173
+app.use(cors({
+  origin: [
+    'http://localhost:3000',
+    'http://localhost:5173',
+    process.env.FRONTEND_URL,
+  ].filter(Boolean),
+  credentials: true,
+}));
+
 app.use(express.json());
 app.use(globalLimiter);
-const PORT = 5000;
+const PORT = process.env.PORT || 5000;
 
 pool.query("SELECT NOW()", (err, res) => {
   if (err) {

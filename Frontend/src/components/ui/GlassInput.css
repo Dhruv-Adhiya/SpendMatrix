@@ -1,0 +1,92 @@
+.glass-input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-1);
+  width: 100%;
+}
+
+.glass-input-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  font-weight: 500;
+}
+
+.glass-input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.glass-input-icon {
+  position: absolute;
+  left: var(--spacing-2);
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  pointer-events: none;
+}
+
+.glass-input {
+  width: 100%;
+  background: var(--color-bg-glass);
+  border: 1px solid var(--color-border-glass);
+  border-radius: var(--radius-sm);
+  color: var(--color-text-primary);
+  padding: 10px var(--spacing-2);
+  font-family: var(--font-family-body);
+  font-size: 14px;
+  transition: all var(--transition-fast);
+}
+
+.glass-input.with-icon {
+  padding-left: calc(var(--spacing-2) * 2 + 18px);
+}
+
+.glass-input:focus {
+  outline: none;
+  border-color: var(--color-accent-primary);
+  box-shadow: 0 0 0 1px var(--color-accent-primary), var(--color-hover-glow);
+}
+
+.glass-input:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.glass-input.has-error {
+  border-color: var(--color-accent-expense);
+}
+
+.glass-input.has-error:focus {
+  box-shadow: 0 0 0 1px var(--color-accent-expense), 0 0 15px rgba(244, 63, 94, 0.15);
+}
+
+.glass-input-error {
+  font-size: 12px;
+  color: var(--color-accent-expense);
+}
+
+/* Select specific styles */
+select.glass-input {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding-right: var(--spacing-4);
+  cursor: pointer;
+}
+
+select.glass-input option {
+  background-color: var(--color-bg-secondary);
+  color: var(--color-text-primary);
+}
+
+.glass-select-chevron {
+  position: absolute;
+  right: var(--spacing-2);
+  pointer-events: none;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+}

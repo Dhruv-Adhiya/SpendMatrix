@@ -1,0 +1,30 @@
+.error-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: var(--spacing-6) var(--spacing-3);
+  color: var(--color-text-secondary);
+}
+
+.error-state-icon {
+  color: var(--color-accent-expense);
+  margin-bottom: var(--spacing-3);
+  opacity: 0.8;
+}
+
+.error-state-title {
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-1);
+}
+
+.error-state-message {
+  max-width: 400px;
+  margin-bottom: var(--spacing-4);
+  font-size: 14px;
+}
+
+.error-state-retry {
+  margin-top: var(--spacing-2);
+}
