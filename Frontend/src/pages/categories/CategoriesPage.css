@@ -1,0 +1,131 @@
+.categories-page {
+  display: flex;
+  flex-direction: column;
+}
+
+.page-header-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+  margin: 0;
+}
+
+.categories-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+@media (min-width: 768px) {
+  .categories-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.categories-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.column-header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-2);
+  margin-bottom: var(--spacing-4);
+  padding-bottom: var(--spacing-2);
+  border-bottom: 1px solid var(--color-border-glass);
+}
+
+.column-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.expense-icon {
+  color: var(--color-accent-expense);
+}
+
+.income-icon {
+  color: var(--color-accent-income);
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
+}
+
+.category-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: background var(--transition-fast);
+}
+
+.category-item:hover {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .category-item:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.category-item-left {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.category-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.category-icon.expense {
+  background: rgba(244, 63, 94, 0.1);
+  color: var(--color-accent-expense);
+}
+
+.category-icon.income {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-accent-income);
+}
+
+.category-name {
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+.category-item-actions {
+  display: flex;
+  gap: var(--spacing-1);
+}
+
+.danger-icon-btn:hover {
+  color: var(--color-accent-expense) !important;
+}
+
+/* Type Toggle Button inside Modal */
+.type-toggle-btn.active.income {
+  background: rgba(16, 185, 129, 0.1);
+  color: var(--color-accent-income);
+  border-color: var(--color-accent-income);
+}
+
+.type-toggle-btn.active.expense {
+  background: rgba(244, 63, 94, 0.1);
+  color: var(--color-accent-expense);
+  border-color: var(--color-accent-expense);
+}

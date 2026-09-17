@@ -1,0 +1,144 @@
+.budget-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-4);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast), background var(--transition-fast);
+}
+
+.budget-card:hover {
+  transform: translateY(-2px);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="light"] .budget-card:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+
+.budget-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.budget-category-info {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-3);
+}
+
+.budget-icon-wrapper {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-text-primary);
+}
+
+[data-theme="light"] .budget-icon-wrapper {
+  background: rgba(0, 0, 0, 0.05);
+}
+
+.budget-category-name {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0;
+  color: var(--color-text-primary);
+}
+
+.budget-actions {
+  display: flex;
+  gap: var(--spacing-1);
+}
+
+.budget-amounts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.budget-amount-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.budget-amount-item.right {
+  text-align: right;
+}
+
+.budget-amount-label {
+  font-size: 12px;
+  text-transform: uppercase;
+  color: var(--color-text-secondary);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin-bottom: 2px;
+}
+
+.budget-amount-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--color-text-primary);
+}
+
+.budget-amount-value.text-muted {
+  color: var(--color-text-muted);
+}
+
+.budget-progress-container {
+  padding: 4px 0;
+}
+
+.budget-progress-track {
+  height: 6px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+  position: relative;
+}
+
+[data-theme="light"] .budget-progress-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+
+.budget-progress-fill {
+  height: 100%;
+  border-radius: var(--radius-full);
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.budget-progress-fill.normal {
+  background: var(--color-accent-primary);
+}
+
+.budget-progress-fill.warning {
+  background: var(--color-accent-warning);
+}
+
+.budget-progress-fill.danger {
+  background: var(--color-accent-expense);
+}
+
+.budget-card-footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.danger-text {
+  color: var(--color-accent-expense);
+}
+
+.income-text {
+  color: var(--color-accent-income);
+}
+
+.normal-text {
+  color: var(--color-accent-primary);
+}
+
+.warning-text {
+  color: var(--color-accent-warning);
+}

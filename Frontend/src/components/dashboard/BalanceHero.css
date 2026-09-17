@@ -1,0 +1,93 @@
+.balance-hero {
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(10, 10, 15, 0.4));
+  border: 1px solid rgba(139, 92, 246, 0.2);
+  margin-bottom: var(--spacing-4);
+}
+
+[data-theme="light"] .balance-hero {
+  background: linear-gradient(135deg, rgba(139, 92, 246, 0.05), rgba(255, 255, 255, 0.4));
+}
+
+.balance-hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.balance-label {
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-1);
+}
+
+.balance-amount {
+  font-size: clamp(36px, 5vw, 48px);
+  font-weight: 700;
+  margin-bottom: var(--spacing-4);
+  color: var(--color-text-primary);
+  letter-spacing: -0.02em;
+}
+
+.balance-context {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-4);
+  background: rgba(0, 0, 0, 0.2);
+  padding: var(--spacing-2) var(--spacing-4);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-border-glass);
+}
+
+[data-theme="light"] .balance-context {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.context-divider {
+  width: 1px;
+  height: 24px;
+  background: var(--color-border-glass);
+}
+
+.context-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.context-label {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  margin-bottom: 2px;
+}
+
+.context-value {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.context-item.income .context-value {
+  color: var(--color-accent-income);
+}
+
+.context-item.expense .context-value {
+  color: var(--color-accent-expense);
+}
+
+.balance-hero-glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.15) 0%, rgba(0,0,0,0) 70%);
+  z-index: 0;
+  pointer-events: none;
+}

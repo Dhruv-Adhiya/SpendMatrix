@@ -1,0 +1,28 @@
+.quick-actions-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.quick-actions-title {
+  font-size: 16px;
+  color: var(--color-text-primary);
+  margin-bottom: var(--spacing-4);
+  margin-top: 0;
+}
+
+.quick-actions-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--spacing-3);
+}
+
+.quick-action-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (min-width: 1024px) {
+  .quick-actions-grid {
+    grid-template-columns: 1fr;
+  }
+}
